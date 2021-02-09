@@ -13,5 +13,6 @@ namespace MultiplosModelsParaView.Models
 
         public IEnumerable<Categorias> Categorias { get; set; }
 
+
     }
 }
