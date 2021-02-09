@@ -1,0 +1,50 @@
+﻿@model MultiplosModelsParaView.Models.HomeIndex
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+<div class="container">
+    <fieldset>
+        <legend>
+
+            <p>
+                Produtp Id: <input type="text" value="@Model.Produtos.Id" />
+            </p>
+
+            <p>
+                Nome Id: <input type="text" value="@Model.Produtos.Nome" />
+            </p>
+
+
+            <p>
+                Categorias:
+                <select>
+                    @foreach (var item in Model.Categorias)
+                    {
+                        <option value="@item.Id">@item.Nome"</option>
+                    }
+                </select>
+            </p>
+
+            <p>
+                Marcas:
+                <select>
+                    @foreach (var item in Model.Marcas)
+                    {
+                        <option value="@item.Id">@item.Nome"</option>
+                    }
+                </select>
+            </p>
+
+
+        </legend>
+    </fieldset>
+
+</div>
